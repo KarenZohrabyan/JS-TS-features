@@ -40,9 +40,9 @@ const deepObject = {
         home: {
             street: "asfasg",
         }
-    }
+    },
+    age: 231
 }
-
 
 function deepCloneRecursive(obj) {
     let clone = {};
@@ -58,4 +58,11 @@ function deepCloneRecursive(obj) {
 }
 
 const deepClonedObject = deepCloneRecursive(deepObject);
-console.log(deepClonedObject)
+
+
+const ob = {
+    name: Symbol,
+    name: "Karen"
+}
+
+console.log({...ob});
