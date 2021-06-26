@@ -33,4 +33,4 @@ const qwerty = {
 
 const asdasd = JSON.parse(JSON.stringify(qwerty));
 console.log(asdasd)
-console.log(typeof asdasd)
+console.log(typeof asdasd);
