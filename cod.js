@@ -33,3 +33,54 @@ const qwerty = {
 
 const asdasd = JSON.parse(JSON.stringify(qwerty));
 console.log(asdasd)
+
+
+const alab = {
+    age: 25,
+    foo() {
+        return this.age;
+    }
+}
+
+console.log(alab.foo());
+const __foo = alab.foo;
+console.log(__foo.apply())
+console.log(__foo());
+
+
+
+const obj = {
+    name: "Karen",
+    token: "asdasdasd",
+    status: 123
+}
+
+function getName () {
+    return "namename"
+}
+
+console.log(Object.assign(obj, {name: getName(), status: 999}));
+
+
+function createUser (email, firstName, lastName, type) {
+    const user = {};
+    console.log(user);
+    Object.assign(user, {email, firstName, lastName, type});
+    console.log(user);
+}
+
+function createUser_2 (params) {
+    const user = {};
+    console.log(user);
+    Object.assign(user, params);
+    console.log(user);
+}
+
+createUser("asfasf@gmail.com", "Karen", "Zohrabyan", "buyer")
+const email = "asdasd@mau"
+createUser_2({
+    email,
+    firstName: "AraShmayis",
+    lastName: "Tonoyan",
+    type: "seller"
+})

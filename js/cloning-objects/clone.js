@@ -66,3 +66,29 @@ const ob = {
 }
 
 console.log({...ob});
+
+
+
+
+const asd = {
+    name: "Karen",
+    age: 25
+}
+
+function newObject (obj) {
+    return {
+        ...obj,
+        id: 111
+    }
+}
+
+function newObjectAssign(obj) {
+    return Object.assign({}, obj, {id:222});
+}
+
+let myNewObject = newObject(asd);
+console.log(myNewObject);
+console.log(myNewObject === asd)
+myNewObject = newObjectAssign(asd);
+console.log(myNewObject);
+console.log(myNewObject === asd)
