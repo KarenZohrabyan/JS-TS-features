@@ -40,3 +40,19 @@ function changeObjectsToString (obj) {
 }
 
 const res = changeObjectsToString(obj);
+
+const arr1 = [1, 2, 3, 4, 5, 6]
+
+
+const sumOfArray = (arr) => {
+    let count = arr[0];
+    arr.shift();
+    if(arr.length == 0) {
+        return count;
+    } else {
+        count += sumOfArray(arr)
+    }
+    return count
+}
+
+console.log(sumOfArray(arr1))
